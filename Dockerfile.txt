@@ -1,0 +1,23 @@
+# backend/Dockerfile
+FROM node:18-alpine
+
+# Create app directory
+WORKDIR /app
+
+# Copy package files
+COPY package*.json ./
+
+# Install dependencies
+RUN npm install
+
+# Copy source code
+COPY . .
+
+# Build TypeScript if needed (optional if using ts-node)
+# RUN npm run build
+
+# Expose backend port
+EXPOSE 4000
+
+# Command to run the backend
+CMD ["npx", "ts-node", "src/server.ts"]

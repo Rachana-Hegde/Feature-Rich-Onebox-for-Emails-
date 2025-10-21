@@ -1,0 +1,131 @@
+/* Global container */
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 40px auto;
+  font-family: 'Arial', sans-serif;
+  padding: 30px 20px;
+  background-color: #f5f7fa; /* light grey-blue background */
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+}
+
+/* Search Bar */
+.search-bar {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.search-bar:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.4);
+}
+
+/* Email Filter Dropdown */
+.email-filter {
+  padding: 8px 12px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.email-filter:hover,
+.email-filter:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+/* Email List */
+.email-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Email Item */
+.email-item {
+  border: 1px solid #ddd;
+  padding: 18px 15px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.email-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Email Details */
+.email-details p {
+  margin: 6px 0;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.email-details strong {
+  color: #007bff;
+}
+
+/* Suggested Reply */
+.suggested-reply {
+  margin-top: 10px;
+}
+
+.suggested-reply button {
+  padding: 8px 16px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.suggested-reply button:hover:not(:disabled) {
+  background-color: #0056b3;
+  transform: translateY(-1px);
+}
+
+.suggested-reply button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.reply-text {
+  margin-top: 8px;
+  padding: 10px 12px;
+  background-color: #e9ecef;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Controls Wrapper */
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+/* Page Header */
+h1 {
+  margin-bottom: 25px;
+  color: #222;
+  font-size: 2.2rem;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
