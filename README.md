@@ -1,153 +1,101 @@
-ReachInbox OneBox
+📧 Feature-Rich Onebox for Emails
 
-A feature-rich email dashboard built with React (frontend) and Node.js/Express (backend), allowing users to view, filter, and analyze their emails from multiple providers (Gmail, Outlook, Yahoo) in one place.
+This project is a modern email onebox application that allows users to view, categorize, and interact with their emails efficiently. Built with React for the frontend and a Node.js/Express backend, it integrates AI-powered email categorization, search, and dynamic interaction features.
 
-Features
+🚀 Features
 
-View emails from multiple providers in a unified dashboard.
+📬 Email Listing: View all emails in a clean, responsive interface.
 
-Filter emails by provider (Gmail, Outlook, Yahoo).
+🔎 Search & Filter: Search emails by subject, sender, or AI category.
 
-Display latest 3 emails sorted by date.
+🧠 AI Categorization: Emails are automatically categorized (e.g., work, personal, spam).
 
-AI-powered email categorization (based on aiCategory).
+🛠 Dynamic Onebox: Click on an email to expand a detailed view with all contents.
 
-Refresh emails manually.
+📅 Date Sorting & Filtering: Sort emails by date and priority.
 
-Clean and responsive UI using React.
+🖌 Responsive UI: Built with React, CSS, and optionally Tailwind/Bootstrap.
 
-Tech Stack
+⚡ Performance Optimized: Smooth interactions for large email datasets.
 
-Frontend: React, TypeScript, CSS
+🛠 Technology Stack
 
-Backend: Node.js, Express, CORS
+Frontend: React, JavaScript, CSS
 
-API: RESTful API for fetching emails
+Backend: Node.js, Express.js
 
-Optional: AI categorization logic
+Database: MongoDB / any JSON-based storage for email data
 
-Database: JSON file or MongoDB (depending on implementation)
+AI Features: Optional integration for automated email classification
 
-Prerequisites
+Libraries: Axios, React Router, Tailwind CSS (optional)
 
-Node.js >= 14
+📂 Project Structure
+onebox-email-app/
+│
+├── backend/
+│   ├── server.js               # Express server
+│   ├── routes/                 # API routes
+│   └── models/                 # Database models
+│
+├── frontend/
+│   ├── src/
+│   │   ├── components/         # EmailList, EmailItem, SearchBar
+│   │   ├── pages/              # HomePage, EmailDetailPage
+│   │   └── App.js
+│   └── public/
+│
+├── package.json
+└── README.md
 
-npm >= 6
+🔧 Installation & Setup
+1. Clone the Repository
+git clone https://github.com/your-username/onebox-email-app.git
+cd onebox-email-app
 
-React >= 18
-
-Installation
-1. Backend Setup
-# Navigate to backend folder
+2. Setup Backend
 cd backend
-
-# Install dependencies
 npm install
-
-# Start the backend server
-npm run dev   # or use node index.js
-
-
-The backend will run at: http://localhost:5000
-
-API endpoint for emails: http://localhost:5000/api/emails
-
-⚠️ Make sure to enable CORS in Express to allow frontend requests.
-
-2. Frontend Setup
-# Navigate to frontend folder
-cd frontend
-
-# Install dependencies
-npm install
-
-# Start the React app
 npm start
 
 
-The frontend will run at: http://localhost:3000
+Runs the server at http://localhost:5000
 
-Automatically fetches emails from backend API.
+3. Setup Frontend
+cd frontend
+npm install
+npm start
 
-Usage
 
-Open the app in your browser.
+Opens the React app at http://localhost:3000
 
-Select the email provider from the dropdown.
+💻 Usage
 
-Click Refresh to fetch the latest emails.
+Launch both backend and frontend servers.
 
-View emails in the dashboard with AI categories displayed.
+Open the frontend URL in your browser.
 
-Project Structure
-/backend
-  ├─ index.js            # Backend entry point
-  ├─ routes/
-  │   └─ emails.js       # API route for emails
-  └─ package.json
+View the list of emails in the onebox layout.
 
-/frontend
-  ├─ src/
-  │   ├─ components/
-  │   │   └─ EmailList.tsx
-  │   ├─ pages/
-  │   │   └─ HomePage.tsx
-  │   ├─ App.tsx
-  │   └─ index.tsx
-  └─ package.json
+Use search and filters to find specific emails.
 
-API Example
+Click on an email to expand its detailed view.
 
-GET /api/emails
+🧠 AI Email Categorization
 
-{
-  "data": [
-    {
-      "id": "1",
-      "from": "example@gmail.com",
-      "to": ["user@domain.com"],
-      "subject": "Welcome!",
-      "body": "Hello, this is a test email.",
-      "date": "2025-10-21T09:00:00Z",
-      "aiCategory": "Promotion"
-    }
-  ]
-}
+The onebox supports automatic AI classification of emails into categories like:
 
-Dependencies
+Work
 
-Backend:
+Personal
 
-express
+Promotions
 
-cors
+Spam
 
-nodemon (dev)
+This can be powered by an AI API or a simple ML model trained on email subjects and content.
 
-Frontend:
+📄 License
 
-react
-
-react-dom
-
-typescript
-
-Tips & Troubleshooting
-
-Emails not loading:
-
-Check backend is running (localhost:5000/api/emails)
-
-Ensure CORS is enabled
-
-Verify API response structure matches frontend expectations
-
-Customizing providers:
-
-Update the dropdown in HomePage.tsx
-
-Update filtering logic in loadEmails
-
-License
-
-This project is licensed under the MIT License.
+This project is open-source under the MIT License.
+You can use, modify, and distribute it freely.
